@@ -66,8 +66,7 @@ def requires_auth(f):
     def decorated(*args, **kwargs):
         try:
             token = get_token_auth_header()
-            print("https://login.microsoftonline.com/" +
-                  TENANT_ID + "/discovery/v2.0/keys")
+            print(token)
             jsonurl = urlopen("https://login.microsoftonline.com/" +
                             TENANT_ID + "/discovery/v2.0/keys")
             jwks = json.loads(jsonurl.read())
