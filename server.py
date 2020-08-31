@@ -105,6 +105,7 @@ def requires_auth(f):
                                  "incorrect claims,"
                                  "please check the audience and issuer"}, 401)
             except Exception:
+                print("THIS ONE 2")
                 raise AuthError({"code": "invalid_header",
                                  "description":
                                  "Unable to parse authentication"
