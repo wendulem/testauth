@@ -82,6 +82,7 @@ def requires_auth(f):
                         "e": key["e"]
                     }
         except Exception:
+            print("THIS ONE")
             raise AuthError({"code": "invalid_header",
                                 "description":
                                 "Unable to parse authentication"
